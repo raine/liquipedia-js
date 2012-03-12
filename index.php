@@ -260,5 +260,3 @@ function createNavigationBarToggleButton()
 }
 
 addOnloadHook( createNavigationBarToggleButton );
-
-/* MediaWiki:Dtrush.js */

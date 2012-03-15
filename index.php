@@ -135,6 +135,10 @@ function createCollapseButtons()
         }
     }
 
+	// Create [+maps] buttons after setting up the table collapse buttons,
+	// but before initial collapseTable calls
+	toggleMapListSetup();
+
     for ( var i = 0;  i < tableIndex; i++ ) {
         if ( hasClass( NavigationBoxes[i], "collapsed" ) || ( tableIndex >= autoCollapse && hasClass( NavigationBoxes[i], "autocollapse" ) ) ) {
             collapseTable( i );
@@ -143,8 +147,6 @@ function createCollapseButtons()
 }
 
 addOnloadHook( createCollapseButtons );
-addOnloadHook( toggleMapListSetup );
-
 
 /** Test if an element has a certain class **************************************
   *
